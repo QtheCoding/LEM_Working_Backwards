@@ -94,6 +94,12 @@
     <None Include="anim\assets\solid_borax\solid_borax_build.bytes">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="dlc\expansion1\worldgen\features\custom\CustomCave.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="dlc\expansion1\worldgen\subworlds\aquatic\GraphiteCaves.yaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="elements\elements.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -104,7 +110,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="templates\" />
+    <Folder Include="worldgen\features\" />
+    <Folder Include="worldgen\subworlds\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="anim\assets\solid_borax\solid_borax.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
