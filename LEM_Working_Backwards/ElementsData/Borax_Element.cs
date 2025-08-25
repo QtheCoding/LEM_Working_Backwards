@@ -34,12 +34,12 @@ namespace LEM_Working_Backwards.ElementsData
 
         public static void RegisterSolidBoraxSubstance()
         {
-            Substance substance = Assets.instance.substanceTable.GetSubstance(SimHashes.SolidCarbonDioxide);
+            Substance substance = Assets.instance.substanceTable.GetSubstance(SimHashes.Granite);
             ElementUtil.CreateRegisteredSubstance(
-                "SolidBorax", 
-                Element.State.Solid, 
-                ElementUtil.FindAnim("solid_borax_kanim"), 
-                BoraxElement.CreateSolidBoraxMaterial(substance.material), 
+                "SolidBorax",
+                Element.State.Solid,
+                ElementUtil.FindAnim("solid_borax_kanim"),
+                BoraxElement.CreateSolidBoraxMaterial(substance.material),
                 BoraxElement.BORAX_COLOR);
         }
     }

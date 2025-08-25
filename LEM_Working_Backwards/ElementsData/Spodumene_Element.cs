@@ -6,7 +6,7 @@ namespace LEM_Working_Backwards.ElementsData
     public static class SpodumeneElement
     {
         public const string SPODUMENE_ID = "Spodumene";
-        public static readonly Color32 SPODUMENE_COLOR = new Color32(57, 255, 20, 255);
+        public static readonly Color32 SPODUMENE_COLOR = new Color32((byte)57, (byte)255, (byte)20, byte.MaxValue);
         //new Color32(210, 180, 140, 255); // A light brown color for Spodumene
         public static readonly SimHashes SolidSpodumeneSimHash = (SimHashes)Hash.SDBMLower("Spodumene");
 
@@ -17,7 +17,7 @@ namespace LEM_Working_Backwards.ElementsData
             for (int index = 0; index < pixels32.Length; ++index)
             {
                 float num = ((Color)pixels32[index]).grayscale * 1.5f;
-                pixels32[index] = (Color32)((Color)SPODUMENE_COLOR * num);
+                pixels32[index] = (Color32)((Color)SpodumeneElement.SPODUMENE_COLOR * num);
             }
             texture2D.SetPixels32(pixels32);
             texture2D.Apply();
@@ -36,7 +36,7 @@ namespace LEM_Working_Backwards.ElementsData
         public static void RegisterSpodumeneSubstance()
         {
             // Reuse an existing vanilla substance as the visual/template source.
-            Substance substance = Assets.instance.substanceTable.GetSubstance(SimHashes.Granite);
+            Substance substance = Assets.instance.substanceTable.GetSubstance(SimHashes.Cuprite);
 
             // Create + register a new substance with the same anim/material as Igneous Rock.
             ElementUtil.CreateRegisteredSubstance(
@@ -44,7 +44,7 @@ namespace LEM_Working_Backwards.ElementsData
                 Element.State.Solid,
                 ElementUtil.FindAnim("spodumene_kanim"),        // substance.anim (kanim)
                 SpodumeneElement.CreateSpodumeneMaterial(substance.material),    // reuse Igneous Rock material
-                SPODUMENE_COLOR
+                SpodumeneElement.SPODUMENE_COLOR
             );
         }
     }

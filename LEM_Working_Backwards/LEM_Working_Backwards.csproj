@@ -70,11 +70,19 @@
     <Compile Include="Buildings\NewRecipes\Rock_Crusher.cs" />
     <Compile Include="Buildings\NewRecipes\Soldering_Station.cs" />
     <Compile Include="ElementsData\Borax_Element.cs" />
+    <Compile Include="ElementsData\Galena_Element.cs" />
+    <Compile Include="ElementsData\Lithium_Element.cs" />
     <Compile Include="ElementsData\Spodumene_Element.cs" />
     <Compile Include="Patches\ElementList_Hookup.cs" />
     <Compile Include="Patches\SimHashes_Parse.cs" />
     <Compile Include="Patches\SimHashes_ToString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="anim\assets\raw_galena\raw_galena_anim.bytes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="anim\assets\raw_galena\raw_galena_build.bytes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="anim\assets\granite\granite_anim.bytes" />
     <None Include="anim\assets\granite\granite_build.bytes" />
     <None Include="anim\assets\spodumene\spodumene_anim.bytes">
@@ -121,6 +129,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="anim\assets\raw_galena\raw_galena.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="anim\assets\granite\granite_0.png" />
     <Content Include="anim\assets\spodumene\spodumene_0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
